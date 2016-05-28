@@ -33,15 +33,6 @@ names(tdata)<-header
 head(tdata)
 
 #Split date into start-end date
-dim(tdata)
-
-#Date1<-sapply(strsplit(as.character(tdata[i,1])," - "),`[`,1)
-#Date2<-sapply(strsplit(as.character(tdata[i,1])," - "),`[`,2)
-head(Date)
-tdata$startDate<-as.Date(Date[,1])
-tdata$endDate<-as.Date(Date[,2])
-
-
 tdata$StartDate <- as.Date(sapply(strsplit(as.character(tdata[,1]), " - "), `[`, 1))
 tdata$EndDate <- as.Date(sapply(strsplit(as.character(tdata[,1]), " - "), `[`, 2))
 tdata$Year <- sapply(strsplit(as.character(tdata$StartDate), "-"), `[`, 1)
