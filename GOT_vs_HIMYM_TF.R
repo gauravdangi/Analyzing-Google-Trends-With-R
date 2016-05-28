@@ -83,18 +83,4 @@ ggplot(tdata,aes(x=Year))+geom_point(aes(y=GOT,colour="GOT"))+
 
 
 
-ggplot(tdata,aes(x=StartDate)) +
-  stat_smooth(aes(y = beer, group=1, colour="beer"), method=lm, formula = y ~ poly(x,1), level=0.95) +
-  stat_smooth(aes(y = wine_clean, group=1, colour="wine"), method=lm, formula = y ~ poly(x,2), level=0.95) +
-  geom_point (aes(y = beer, colour = "beer"), size=1) +
-  geom_point (aes(y = wine_clean, colour ="wine"), size=1) +
-  scale_colour_manual("Search Terms", breaks = c("beer", "wine"), values = c("blue","red")) +
-  theme_bw() +
-  xlab("year") +
-  ylab("beverage") +
-  ggtitle("US Wine Versus Beer on Google Trends")
-
-
-
-
 
